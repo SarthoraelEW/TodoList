@@ -1,0 +1,27 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "A todo list",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SarthoraelEW/TodoList.git"
+  },
+  "author": "Sartho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SarthoraelEW/TodoList/issues"
+  },
+  "homepage": "https://github.com/SarthoraelEW/TodoList#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.4",
+    "nodemon": "^2.0.15"
+  }
+}
