@@ -11,6 +11,7 @@ router.get('/get-all-tasks', taskController.getAllTasks);
 router.put('/update-activity/:id', taskController.updateActivity);
 router.put('/update-type/:id', taskController.updateType);
 router.put('/update-deadline/:id', taskController.updateDeadline);
+router.put('/update-complete/:id', taskController.updateComplete);
 router.patch('/add-participant/:id', taskController.addParticipant);
 router.patch('/delete-participant/:id', taskController.deleteParticipant);
 

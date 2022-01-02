@@ -19,6 +19,10 @@ const TaskSchema = mongoose.Schema(
     participants: {
       type: [String],
       default: []
+    },
+    complete: {
+      type: Boolean,
+      default: false
     }
   },
   {

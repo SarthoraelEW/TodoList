@@ -100,6 +100,29 @@ exports.updateDeadline = async (req, res) => {
   }
 };
 
+exports.updateComplete = async (req, res) => {
+  if (!ObjectId.isValid(req.params.id))
+    return res.status(400).send("ID unknow: " + req.params.id);
+
+  const { complete } = req.body;
+
+  try {
+    TaskModel.findByIdAndUpdate(
+      req.params.id,
+      {
+        $set: { complete: complete },
+      },
+      { new: true, upsert: true, setDefaultsOnInsert: true },
+      (err, docs) => {
+        if (!err) res.send(docs);
+        else return res.status(500).json(err);
+      }
+    );
+  } catch (err) {
+    return res.status(500).json(err);
+  }
+};
+
 exports.addParticipant = async (req, res) => {
   if (!ObjectId.isValid(req.params.id))
     return res.status(400).send("ID unknow: " + req.params.id);
